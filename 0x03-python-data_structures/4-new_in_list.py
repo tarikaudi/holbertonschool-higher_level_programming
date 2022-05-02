@@ -6,4 +6,4 @@ def new_in_list(my_list, idx, element):
             return my_list
         else:
             aux[idx] = element
-            return 
+            return aux
