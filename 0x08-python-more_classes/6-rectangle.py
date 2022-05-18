@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Task 1-rectangle.py by (0-rectangle.py)
-Create two private instances attributes
+Task 6-rectangle.py by (5-rectangle.py)
+Print a Rectangle
 """
 
 
@@ -17,7 +17,7 @@ class Rectangle():
     """
 
     def __init__(self, width=0, height=0):
-        """Initialize - but no private this is into property"""
+        """Initialize"""
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
@@ -28,9 +28,9 @@ class Rectangle():
 
     @height.setter
     def height(self, value):
-        if type(value) is not int:
+        if (type(value) != int):
             raise TypeError("width must be an integer")
-        if value < 0:
+        if (value < 0):
             raise ValueError("width must be >= 0")
         self.__height = value
 
@@ -40,9 +40,9 @@ class Rectangle():
 
     @width.setter
     def width(self, value):
-        if type(value) is not int:
+        if (type(value) != int):
             raise TypeError("height must be an integer")
-        if value < 0:
+        if (value < 0):
             raise ValueError("height must be >= 0")
         self.__width = value
 
@@ -69,10 +69,10 @@ class Rectangle():
             return string[:-1]
 
     def __repr__(self):
-        """return a reppp"""
+        """return in stdout a rectangle"""
         return f"Rectangle({self.__height}, {self.__width})"
 
     def __del__(self):
-        """print a del"""
-        Rectangle.number_of_instances += 1
+        "print a message when delete a class"
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
