@@ -6,15 +6,15 @@ Print a Rectangle
 
 
 class Rectangle:
-    number_of_instances = 0
     """
     Attribute (private): width
     Attribute (private): height
     @property(height) - retrieve value
     @height.setter - set the value
     @property(width) - retrieve value
-    @width.setter - set the value
+    @width.setter - set thiiiilue
     """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initialize"""
