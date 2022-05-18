@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Task 1-rectangle.py by (0-rectangle.py)
-Create two private instances attributes
+Task 4-rectangle.py by (3-rectangle.py)
+Print a Rectangle
 """
 
 
@@ -16,9 +16,9 @@ class Rectangle():
     """
 
     def __init__(self, width=0, height=0):
-        """Initialize - but no private this is into property"""
-        self.height = height
-        self.width = width
+        """Initialize"""
+        self.__height = height
+        self.__width = width
 
     @property
     def height(self):
@@ -26,10 +26,10 @@ class Rectangle():
 
     @height.setter
     def height(self, value):
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
+        if (type(value) != int):
+            raise TypeError("height must be an integer")
+        if (value < 0):
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     @property
@@ -38,10 +38,10 @@ class Rectangle():
 
     @width.setter
     def width(self, value):
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
+        if (type(value) != int):
+            raise TypeError("width must be an integer")
+        if (value < 0):
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     def area(self):
@@ -68,4 +68,4 @@ class Rectangle():
 
     def __repr__(self):
         """return in stdout a rectangle"""
-        return f"Rectangle({self.__height}, {self.__width})"
+        return f"Rectangle({self.__width}, {self.__height})"
