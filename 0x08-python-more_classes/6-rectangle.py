@@ -73,6 +73,6 @@ class Rectangle():
         return f"Rectangle({self.__height}, {self.__width})"
 
     def __del__(self):
-        "print a del"
+        """print a del"""
         Rectangle.number_of_instances += 1
         print("Bye rectangle...")
