@@ -1,0 +1,36 @@
+Import Method:
+
+	>>>text_indentation = __import__('5-text_indentation').text_indentation
+
+Cases working:
+
+	>>>text_identation("strin.g")
+strin.
+
+g
+
+	>>>text_identation("strin..?g?")
+strin.
+
+.
+
+?
+
+g?
+
+	>>>text_identation(23)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+	>>>text_identation("")
+
+	>>>text_identation(".?:")
+.
+
+?
+
+:
+
+	>>>text_identation(""")
+"

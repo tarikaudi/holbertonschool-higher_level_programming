@@ -1,0 +1,60 @@
+Import Method:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+-------------------------------------------------------------------------
+
+Cases that should work:
+
+	>>> add_integer(5, 10)
+	15
+
+	>>> add_integer(5, -1)
+	4
+
+	>>> add_integer(10, 10)
+	20
+
+	>>> add_integer(-15, -15)
+	-30
+
+	>>> add_integer(5, 5)
+	10
+
+	>>> add_integer(99.6, 1)
+	100
+
+Cases with integer and none:
+
+	>>> add_integer(2)
+	100
+
+	>>> add_integer(100)
+	198
+
+	>>> add_integer(-10)
+	88
+
+	>>> add_integer(2.98293829)
+	100
+
+Cases without int or float:
+
+	>>> add_integer("int")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_interger("133", 98)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_interger([34, 2, 34], 1000)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_interger(100, "hi")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer

@@ -1,0 +1,42 @@
+Import Method:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Cases that should work:
+
+	>>> say_my_name("Joaco", "Santos")
+	My name is Joaco Santos
+
+	>>> say_my_name("Luana", "Larola")
+	My name is Luana Larola
+
+	>>> say_my_name("Fernando")
+	My name is Fernando
+
+	>>> say_my_name("Pame")
+	My name is Pame
+
+No arguments passed:
+
+	>>> say_my_name(None)
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+	>>> say_my_name(None, None)
+	Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+
+	>>> say_my_name("Romero", None)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+More than two arguments:
+
+	>>> say_my_name("Pablo", "Suarez", "Polono")
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+
