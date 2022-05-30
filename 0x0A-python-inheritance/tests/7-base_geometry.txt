@@ -1,0 +1,15 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+should work ok
+
+>>> example = BaseGeometry()
+>>> example.integer_validator("Hundreds", 100)
+
+is not implemented
+
+>>> example = BaseGeometry()
+>>> example.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
