@@ -5,6 +5,9 @@
 class BaseGeometry:
     """class"""
 
+    def __init__(self):
+        """initialize class"""
+
     def area(self):
         """comment for the checker"""
         raise Exception("area() is not implemented")
@@ -17,8 +20,9 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
 
 
-class Rectangle(BaseGeometry)
-    """class"""
+class Rectangle(BaseGeometry):
+    """class rectangle"""
+
     def __init__(self, width, height):
         """comment dor the checker accept"""
         super().integer_validator("width", width)
