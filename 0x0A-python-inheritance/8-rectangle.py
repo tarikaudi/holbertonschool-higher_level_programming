@@ -11,6 +11,7 @@ class Rectangle(BaseGeometry):
 
 
     def __init__(self, width, height):
+        """comment dor the checker accept"""
         super().integer_validator("width", width)
         super().integer_validator("height", height)
         self.__width = width
