@@ -3,12 +3,13 @@
 
 
 def pascal_triangle(n):
-    """print triangle"""
-    pascal_tri = []
-    if n <= 0:
-        return []
+    var = []
+    """def pascal_triangle"""
     for i in range(n):
-        a = 11 ** i
-        row = [int(digit) for digit in str(a)]
-        pascal_tri += [row]
-    return pascal_tri
+        row = []
+        if i is 0:
+            row.append(1)
+            var = var + row
+        else:
+            for a in range(i):
+                row
