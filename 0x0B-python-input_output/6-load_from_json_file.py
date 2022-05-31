@@ -7,6 +7,5 @@ import json
 
 def load_from_json_file(my_obj, filename):
     """write overrite"""
-    with open(filename, encoding="UTF8") as data:
-        file_loaded = json.load(data)
-    return file_loaded
+    with open(filename, 'r') as f:
+        return json.loads(f.read())
