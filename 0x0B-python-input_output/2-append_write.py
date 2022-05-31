@@ -4,6 +4,6 @@
 
 def append_write(filename="", text=""):
     """write or overwrite"""
-    with open(filename, 'w', encoding="UTF8") as data:
+    with open(filename, 'a', encoding="UTF8") as data:
         d = data.write(text)
     return d
