@@ -15,7 +15,7 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
- @property
+    @property
     def width(self):
         """getter widht"""
         return self.__width
@@ -96,3 +96,38 @@ class Rectangle(Base):
             f"[Rectangle] ({s.id}) {s.__x}/{s.__y} - {s.__width}/{s.__height}"
             )
 
+    def update(self, *args, **kwargs):
+        """function"""
+        i = 0
+        if args is not None and len(args) != 0:
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.__width = arg
+                if i == 2:
+                    self.__height = arg
+                if i == 3:
+                    self.__x = arg
+                if i == 4:
+                    self.__y = arg
+                i += 1
+        else:
+            if kwargs is not None and len(kwargs) != 0:
+                for key, value in kwargs.items():
+                    """print(f"{key}:{value}")"""
+                    if key == "id":
+                        self.id = value
+                    if key == "width":
+                        self.width = value
+                    if key == "height":
+                        self.height = value
+                    if key == "x":
+                        self.x = value
+                    if key == "y":
+                        self.y = value
+
+    def to_dictionary(self):
+        """__dict__ representation of rectangle"""
+        return {"id": self.id, "width": self.__width,
+                "height": self.__height, "x": self.__x, "y": self.__y}
