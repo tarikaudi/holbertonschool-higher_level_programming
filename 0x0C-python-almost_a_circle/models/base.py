@@ -58,7 +58,7 @@ class Base():
 
         if instance_dady == "Rectangle":
             dummy = cls(2, 2)
- 
+
         dummy.update(**dictionary)
 
         return dummy
