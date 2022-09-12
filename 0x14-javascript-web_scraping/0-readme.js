@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/*comment for the chekcer*/
+/* comment for the chekcer */
 
 require('process');
 const fs = require('fs');
