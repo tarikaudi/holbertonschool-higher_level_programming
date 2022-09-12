@@ -13,7 +13,7 @@ axios.get(url)
     for (const arr of movies) {
       const perso = arr.characters;
       for (const personaje of perso) {
-        if (personaje.includes('18')) {count++; }
+        if (personaje.includes('18')) { count++; }
       }
     }
     console.log(count);

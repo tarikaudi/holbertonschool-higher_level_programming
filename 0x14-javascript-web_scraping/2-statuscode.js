@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /* comment for the cheker */
-const axios = require('axios').default
+const axios = require('axios').default;
 
 const url = process.argv[2];
 
